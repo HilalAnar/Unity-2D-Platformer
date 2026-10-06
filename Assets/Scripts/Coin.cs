@@ -6,6 +6,9 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            ScoreManager scoreManager = FindFirstObjectByType<ScoreManager>();
+            scoreManager.AddScore();
+
             Destroy(gameObject);
         }
     }
